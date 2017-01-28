@@ -1,0 +1,31 @@
+{
+  "name": "js-persistent-vector",
+  "version": "0.0.1",
+  "description": "JS Persistent Vector",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "node test/tests.js",
+    "benchmark": "node bench/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wshager/js-persistent-vector.git"
+  },
+  "author": "W.S. Hager",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wshager/js-persistent-vector/issues"
+  },
+  "homepage": "https://github.com/wshager/js-persistent-vector#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "benchmark": "2.0.x",
+    "immutable": "3.7.x",
+    "microtime": "^2.0.0",
+    "mori": "0.3.x",
+    "pad": "1.0.x"
+  }
+}
