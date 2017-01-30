@@ -28,6 +28,8 @@ import * as shared from "./shared";
 
 export function TVec(origin = 0, capacity = 0, shift = 0, root = null, tail = null) {
     this.id = newId();
+    this.origin = origin;
+    this.capacity = capacity;
     this.size = capacity - origin;
     this.shift = shift || 0;
     this.root = root || null;
