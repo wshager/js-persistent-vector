@@ -1,10 +1,10 @@
 {
   "name": "js-persistent-vector",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "JS Persistent Vector",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "node test/tests.js",
+    "test": "node test/index.js",
     "benchmark": "node bench/run.js"
   },
   "repository": {
