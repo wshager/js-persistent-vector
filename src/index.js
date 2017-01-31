@@ -3,10 +3,10 @@ import { TVec } from "./tvec";
 
 TVec.prototype.asPersistent = function (){
 	this.id = null;
-	return new PVec(this.size, this.shift, this.root, this.compressedTail());
+	return new PVec(this.origin, this.capacity, this.shift, this.root, this.compressedTail());
 };
 PVec.prototype.asTransient = function () {
-	return new TVec(this.size, this.shift, this.root, this.tail);
+	return new TVec(this.origin, this.capacity, this.shift, this.root, this.tail);
 };
 
 
