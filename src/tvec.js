@@ -54,6 +54,14 @@ TVec.prototype.pop = function(){
     return shared.pop(this,update,popTail,ensureEditable);
 };
 
+TVec.prototype.iter = function(){
+    return shared.iter(this);
+};
+
+TVec.prototype.slice = function(begin,end){
+    return shared.slice(this,begin,end,update);
+};
+
 function reShift(vec){
     return vec.shift;
 }
