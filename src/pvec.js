@@ -35,6 +35,10 @@ export function PVec(origin=0, capacity=0, shift=0, root=null, tail=EMPTY_TAIL) 
     this.tail = tail;
 }
 
+PVec.isVec = function(vec){
+    return !!vec && vec.__isVec_Sentinel;
+};
+
 PVec.prototype.__isVec_Sentinel = true;
 
 // public interface
@@ -54,12 +58,11 @@ PVec.prototype.pop = function () {
     return shared.pop(this,update,popTail,arrCopy);
 };
 
-PVec.prototype.iter = function(){
-    return shared.iter(this);
-};
-
-PVec.prototype.slice = function(begin,end){
-    return shared.slice(this,begin,end,update);
+PVec.prototype.toString = function() {
+    let str = "PVec [";
+    for (let j of this.iter()) str += j + ", ";
+    str += "]";
+    return str;
 };
 
 function reShift(vec){
