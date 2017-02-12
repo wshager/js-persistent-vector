@@ -1,6 +1,6 @@
 {
-  "name": "js-persistent-vector",
-  "version": "0.0.5",
+  "name": "persistent-vector",
+  "version": "0.0.8",
   "description": "JS Persistent Vector",
   "main": "./lib/index.js",
   "scripts": {
