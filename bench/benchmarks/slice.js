@@ -14,7 +14,7 @@ module.exports.benchmarks['Native Array'] = keys => {
     let h = [];
     return function() {
         for (let i = 0, len = h.length; i < len; ++i) {
-            h = h.slice(1);
+            h = h.slice(Math.floor(Math.random*h.length));
         }
     };
 };
@@ -23,7 +23,7 @@ module.exports.benchmarks['Immutable'] = keys => {
     let h = immutable.List();
     return function() {
         for (let i = 0, len = h.size; i < len; ++i)
-            h = h.slice(1);
+            h = h.slice(Math.floor(Math.random*h.length));
     };
 };
 
@@ -31,6 +31,6 @@ module.exports.benchmarks['PVec'] = keys => {
     let h = pvec.empty;
     return function() {
         for (let i = 0, len = h.size; i < len; ++i)
-            h = h.slice(1);
+            h = h.slice(Math.floor(Math.random*h.length));
     };
 };
